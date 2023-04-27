@@ -1,47 +1,42 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/setup/typography.css">
+    <link rel="stylesheet" href="css/basics/layout.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/galery.css">
+    <link rel="stylesheet" href="css/components/generator.css">
+    <link rel="stylesheet" href="css/components/about.css">
     <title>Meme Generator</title>
 </head>
+
 <body onload="onInit()">
-    
+
     <header class="main-header">
 
         <h3>Memes creator. Fun.</h3>
         <div class="btn-group">
             <button onclick="onGalleryClick()">Gallery</button>
             <button onclick="onAboutClick()">About</button>
-          </div>
+        </div>
 
     </header>
 
     <section class="main-gallery">
-        <img src="meme-imgs (square)/1.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/2.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/3.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/4.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/5.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/6.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/7.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/8.jpg" alt="" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/9.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <!-- <img src="meme-imgs (square)/1.jpg" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/2.jpg" onclick="onImgClicked(this)" class="meme"> -->
     </section>
-    
-    <section class="main-meme-generator" hidden >
-        <h3>hi</h3>
+
+    <section class="main-meme-generator" hidden>
         <canvas id="my-canvas" height="300" width="300">
         </canvas>
         <div class="control-box">
-            <label for="fline">First Line:</label>
-            <input type="text" id="fline">
-            <button onclick="onButtonClick()">checkme</button>
-        
-
-
-
+            <label for="myInput">Add Your Text:</label>
+            <input type="text" id="myInput" oninput="onInputText()">
+            <button onclick="onSwitchLine()">Switch Line</button>
         </div>
     </section>
 
@@ -52,10 +47,10 @@
 
     <footer>
 
-
-
     </footer>
-
-    <script src="main.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/meme.controller.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,11 @@
+.main-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.meme {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}

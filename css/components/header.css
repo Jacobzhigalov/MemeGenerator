@@ -1,0 +1,15 @@
+.main-header {
+    height: 60px;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group {
+    margin: 20px;
+}
+
+h3{
+    margin: 10px 10px;
+    font-family: impact;
+}
