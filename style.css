@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+.main-header{
+    height: 60px;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group{
+    margin: 20px;
+}
+
+.main-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px ;
+}
+
+.meme{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+
+
+canvas {
+    display: block;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+  }
+
+
+.main-about{
+    display: none;
+    text-align: center;
+}

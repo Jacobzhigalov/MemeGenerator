@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meme Generator</title>
+</head>
+<body onload="onInit()">
+    
+    <header class="main-header">
+
+        <h3>Memes creator. Fun.</h3>
+        <div class="btn-group">
+            <button onclick="onGalleryClick()">Gallery</button>
+            <button onclick="onAboutClick()">About</button>
+          </div>
+
+    </header>
+
+    <section class="main-gallery">
+        <img src="meme-imgs (square)/1.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/2.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/3.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/4.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/5.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/6.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/7.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/8.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+        <img src="meme-imgs (square)/9.jpg" alt="" onclick="onImgClicked(this)" class="meme">
+    </section>
+    
+    <section class="main-meme-generator" hidden >
+        <h3>hi</h3>
+        <canvas id="my-canvas" height="300" width="300">
+        </canvas>
+        <div class="control-box">
+            <label for="fline">First Line:</label>
+            <input type="text" id="fline">
+            <button onclick="onButtonClick()">checkme</button>
+        
+
+
+
+        </div>
+    </section>
+
+    <section class="main-about">
+        <p>We work on this</p>
+    </section>
+
+
+    <footer>
+
+
+
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
