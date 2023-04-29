@@ -1,15 +1,29 @@
 .main-header {
+    width: 100%;
     height: 60px;
-    background-color: green;
+    background-color: orangered;
     display: flex;
     justify-content: space-between;
 }
 
-.btn-group {
-    margin: 20px;
+.btn-group button {
+    background-color: orangered;
+    margin: 1rem 5px;
+    font-family: impact;
+    font-size: large;
+    align-self: center;
+    border: none;
+    color: white;
 }
 
-h3{
+.btn-group button:hover{
+    cursor: pointer;
+}
+
+h3 {
     margin: 10px 10px;
     font-family: impact;
+    color: white;
+    font-size: 3rem;
+    align-self: center;
 }

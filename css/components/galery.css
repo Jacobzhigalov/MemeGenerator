@@ -1,11 +1,27 @@
 .main-gallery {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: auto;
 }
 
 .meme {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 5px;
+}
+
+.border img {
+    transition: .5s ease;
+}
+
+.border img:hover {
+    box-shadow: 0 0 0 5px #000000;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.main-saved-memes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
 }

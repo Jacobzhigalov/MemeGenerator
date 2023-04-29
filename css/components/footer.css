@@ -1,0 +1,10 @@
+.main-footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+    background-color: orangered;
+    left: 0;
+    color: white;
+    font-family: impact;
+}

@@ -2,3 +2,13 @@
     font-family: impact;
     src: url(/fonts/impact.ttf)
 }
+
+@font-face {
+    font-family: comic;
+    src: url(/fonts/comic.ttf)
+}
+
+@font-face {
+    font-family: arial;
+    src: url(/fonts/arial.ttf)
+}

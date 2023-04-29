@@ -1,15 +1,11 @@
 <!DOCTYPE html>
+<html lang=”en”>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/setup/typography.css">
-    <link rel="stylesheet" href="css/basics/layout.css">
-    <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/components/galery.css">
-    <link rel="stylesheet" href="css/components/generator.css">
-    <link rel="stylesheet" href="css/components/about.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Meme Generator</title>
 </head>
 
@@ -17,37 +13,54 @@
 
     <header class="main-header">
 
-        <h3>Memes creator. Fun.</h3>
+        <h3>Memerator</h3>
         <div class="btn-group">
-            <button onclick="onGalleryClick()">Gallery</button>
+            <button onclick="onGalleryClick()">Templates</button>
+            <button onclick="onMyMemesClick()">My Memes</button>
             <button onclick="onAboutClick()">About</button>
         </div>
 
     </header>
 
-    <section class="main-gallery">
-        <!-- <img src="meme-imgs (square)/1.jpg" onclick="onImgClicked(this)" class="meme">
-        <img src="meme-imgs (square)/2.jpg" onclick="onImgClicked(this)" class="meme"> -->
+    <section class="main-gallery border bckimg">
     </section>
 
-    <section class="main-meme-generator" hidden>
+    <section class="main-meme-generator">
         <canvas id="my-canvas" height="300" width="300">
         </canvas>
         <div class="control-box">
             <label for="myInput">Add Your Text:</label>
-            <input type="text" id="myInput" oninput="onInputText()">
+            <input type="text" id="myInput" oninput="onInputText()" placeholder="Think of smth Funny">
             <button onclick="onSwitchLine()">Switch Line</button>
+            <button onclick="onDecreaseFontSize()">Size-</button>
+            <button onclick="onIncreaseFontSize()">Size+</button>
+            <input onchange="onColorChange()" type="color" id="fontColor">
+            <select onchange="onSetFont(this.value)">
+                <option value="impact">Impact(classic)</option>
+                <option value="comic">Comic Sans MS</option>
+                <option value="arial">Arial</option>
+            </select>
+
+            <button onclick="onSaveMeme()">Save Meme</button>
         </div>
     </section>
 
-    <section class="main-about">
-        <p>We work on this</p>
+    <section class="main-saved-memes border bckimg">
+
     </section>
 
 
-    <footer>
+    <section class="main-about bckimg">
+        <p>We work on this</p>
+    </section>
+
+    
+    <footer class="main-footer">
+        <p>Meme Generator by Jacob Zhigalov - 2023</p>
 
     </footer>
+    <script src="js/services/storage.services.js"></script>
+    <script src="js/services/util.service.js"></script>
     <script src="js/services/meme.service.js"></script>
     <script src="js/gallery.controller.js"></script>
     <script src="js/meme.controller.js"></script>
