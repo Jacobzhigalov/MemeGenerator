@@ -34,6 +34,37 @@ function resetInputParameters() {
     gMeme.lines[1].color = 'white'
 }
 
+function downloadCanvas(elLink) {
+    
+    const data = gElCanvas.toDataURL() 
+    elLink.href = data 
+    elLink.download = 'my-meme' 
+}
+
+function loadImageFromInput(ev, onImageReady) {
+    const reader = new FileReader()
+    // After we read the file
+    reader.onload = function (event) {
+        let img = new Image() // Create a new html img element
+        img.src = event.target.result // Set the img src to the img file we read
+        // Run the callBack func, To render the img on the canvas
+        img.onload = onImageReady.bind(null, img)
+        // Can also do it this way:
+        // img.onload = () => onImageReady(img)
+    }
+    reader.readAsDataURL(ev.target.files[0]) // Read the file we picked
+    console.log(reader)
+}
+
+function renderImg(img) {
+    // Draw the img on the canvas
+    gImgs.push({ id: gId++, url: img.src })
+    gMeme.selectedImgId = gId - 1
+    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+    resetInputParameters()
+    renderMeme(gMeme.selectedImgId)
+}
+
 
 function _saveCreatedMemes() {
     saveToStorage('memesDB', gUserMemes)

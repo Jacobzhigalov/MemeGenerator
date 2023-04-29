@@ -1,7 +1,13 @@
+
+.filter {
+    margin: 20px;
+}
+
 .main-gallery {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .meme {

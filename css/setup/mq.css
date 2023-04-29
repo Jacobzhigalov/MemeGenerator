@@ -7,14 +7,22 @@
 
     }
 
+    h3{
+        font-size: 1em;
+    }
+
     .meme {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         margin: 5px;
     }
 
     .btn-group {
         display: flex;
-        margin: 20px;
+        margin: 5px;
+    }
+
+    .btn-group button {
+        font-size: 7px;
     }
 }
