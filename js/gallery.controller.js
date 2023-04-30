@@ -4,8 +4,8 @@ var gUserMemes = []
 var gId = 1
 var gFilterBy = 'All'
 
-// _createSavedMemes()
-// renderSavedMemesGallery()
+_createSavedMemes()
+renderSavedMemesGallery()
 // localStorage.clear()
 
 var gImgs = [

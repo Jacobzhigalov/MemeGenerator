@@ -1,9 +1,8 @@
 'use strict'
 
-// var gUserMemes = []
+var gUserMemes = []
 
 function getTemplates() {
-    console.log(gFilterBy)
     if (gFilterBy === 'All') return gImgs
 
     switch (gFilterBy) {
@@ -32,6 +31,7 @@ function setFilterBy(filterBy) {
 
 function _createSavedMemes() {
     gUserMemes = loadFromStorage('memesDB')
+    if (gUserMemes === null) gUserMemes = []
     if (gUserMemes && gUserMemes.length > 0) return
 }
 
