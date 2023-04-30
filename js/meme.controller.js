@@ -9,6 +9,8 @@ function onInit() {
     gElCanvas = document.querySelector('#my-canvas');
     gCtx = gElCanvas.getContext('2d');
     renderGallery()
+    _createSavedMemes()
+    renderSavedMemesGallery()
 }
 
 

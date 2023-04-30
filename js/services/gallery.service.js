@@ -1,6 +1,6 @@
 'use strict'
 
-var gUserMemes = []
+// var gUserMemes = []
 
 function getTemplates() {
     console.log(gFilterBy)
