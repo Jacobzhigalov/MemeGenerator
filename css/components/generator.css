@@ -26,10 +26,46 @@ canvas {
     text-align: center;
 }
 
-.control-box-buttons{
+.control-box button{
+    border: none;
+    background-color: orangered;
+    color: black;
+    font-size: 100%;
+    font-family: impact;
+}
+
+
+.control-box button:last-child {
+    background-color: cornflowerblue;
+    border: none;
+    font-family: impact;
+    font-size: larger;
+    color: white;
+}
+
+.control-box button:hover{
+    cursor: pointer;
+}
+
+.control-box button span{
+    display:none;
+}
+
+.control-box-buttons {
     display: flex;
     justify-content: space-between;
-    }
+}
+
+i {
+    margin: auto;
+    padding: 5px;
+    border: 2px solid;
+    background-color: white;
+}
+
+.control-box-buttons:hover {
+    cursor: pointer;
+}
 
 .control-box label {
     font-family: impact;

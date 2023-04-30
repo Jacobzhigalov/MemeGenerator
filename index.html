@@ -14,7 +14,7 @@
 
     <header class="main-header">
 
-        <h3>Memerator</h3>
+        <h3 onclick="onGalleryClick()">Memerator</h3>
         <div class="btn-group">
             <button onclick="onGalleryClick()">Templates</button>
             <button onclick="onMyMemesClick()">My Memes</button>
@@ -52,17 +52,21 @@
                 <i class="fa-solid fa-minus" onclick="onDecreaseFontSize()"></i>
                 <i class="fa-solid fa-plus" onclick="onIncreaseFontSize()"></i>
             </div>
-            <input onchange="onColorChange()" type="color" id="fontColor">
+            <input oninput="onColorChange()" type="color" id="fontColor">
             <select onchange="onSetFont(this.value)">
                 <option value="impact">Impact(classic)</option>
                 <option value="comic">Comic Sans MS</option>
                 <option value="arial">Arial</option>
             </select>
 
-            <button onclick="onSaveMeme()">Save Meme</button>
+            <button onclick="onSaveMeme()">Save Meme to "My Memes" <span>✅</span></button>
             <!-- <i class="fa-solid fa-download" href="#" onclick="downloadCanvas(this)" download="file-name"></i> -->
             <a href="#" onclick="downloadCanvas(this)" download="file-name" class="fa-solid fa-download"></a>
+            <label for="">Upload your template here:</label>
             <input type="file" name="image" onchange="onImgInput(event)" />
+            <button class="btn" onclick="onUploadImg()">
+                Share to Facebook
+              </button>
         </div>
     </section>
 
@@ -75,11 +79,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac massa at urna facilisis fringilla.
             Proin ipsum urna, sodales vitae neque porta, euismod laoreet libero. Cras ante justo, sagittis id porttitor
             aliquet, mollis vel orci. Vivamus gravida tempus mauris, vitae condimentum velit ultricies nec. Nulla non
-            blandit justo. Phasellus porttitor elementum commodo. Morbi eros est, pulvinar id facilisis eu, lobortis et
-            turpis. Mauris ipsum libero, tempus et sollicitudin in, vulputate eget enim. Integer at iaculis elit.
-            Maecenas consequat, purus ut aliquam tempor, nibh magna fringilla augue, eget consectetur turpis mi id
-            ligula. Nulla lacinia iaculis turpis.
-
+            blandit justo. 
         </p>
     </section>
 

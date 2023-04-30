@@ -27,3 +27,7 @@ h3 {
     font-size: 3rem;
     align-self: center;
 }
+
+h3:hover{
+    cursor: pointer;
+}

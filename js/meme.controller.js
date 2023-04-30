@@ -13,24 +13,12 @@ function onInit() {
 
 
 function renderMeme(meme) {
-    const elImg = new Image() //
-    elImg.src = gImgs[meme - 1].url//
+    const elImg = new Image()
+    elImg.src = gImgs[meme - 1].url
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-        gCtx.strokeStyle = "black";
-        gCtx.lineWidth = 2;
-        gCtx.textAlign = gMeme.lines[0].align
-        gCtx.fillStyle = gMeme.lines[0].color
-        gCtx.font = gMeme.lines[0].size + `px ${gMeme.lines[0].font}`;
-        gCtx.fillText(gMeme.lines[0].txt.toUpperCase(), 150, 50);
-        gCtx.strokeText(gMeme.lines[0].txt.toUpperCase(), 150, 50);
-        gCtx.textAlign = gMeme.lines[1].align
-        gCtx.fillStyle = gMeme.lines[1].color
-        gCtx.font = gMeme.lines[1].size + `px ${gMeme.lines[1].font}`;
-        gCtx.fillText(gMeme.lines[1].txt.toUpperCase(), 150, 250)
-        gCtx.strokeText(gMeme.lines[1].txt.toUpperCase(), 150, 250)
+        getMemeSettings()
     }
-
 }
 
 
@@ -87,10 +75,30 @@ function onSaveMeme() {
     gUserMemes.push(savedMeme)
     renderSavedMemesGallery()
     _saveCreatedMemes()
+    let elSpan = document.querySelector('.control-box button span')
+    elSpan.style.display = 'block'
+    setTimeout(() => {
+        elSpan.style.display = 'none'
+    }, 1500
+    )
 }
+
+
 
 function onImgInput(ev) {
     loadImageFromInput(ev, renderImg)
+}
+
+function onUploadImg() {
+    const imgDataUrl = gElCanvas.toDataURL('image/jpeg')
+    function onSuccess(uploadedImgUrl) {
+        // Encode the instance of certain characters in the url
+        const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
+        console.log(encodedUploadedImgUrl)
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`)
+    }
+    // Send the image to the server
+    doUploadImg(imgDataUrl, onSuccess)
 }
 
 
@@ -104,7 +112,7 @@ function onImgClicked(ev) {
     let elMemeGenerator = document.querySelector('.main-meme-generator')
     elMemeGenerator.style.display = 'grid'
     gMeme.selectedImgId = ev
-    renderMeme(ev)
+    renderMeme(gMeme.selectedImgId)
 }
 
 

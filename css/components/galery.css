@@ -4,9 +4,10 @@
 }
 
 .main-gallery {
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: auto auto;
     margin-bottom: 50px;
 }
 
